@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+        <title>Convertir numeros a letras</title>
+
+        <style>
+            #numero {
+                padding: 10px;
+                text-align: right;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Código de número a letras</h1>
+        <p>Este código puede convertir desde 0.01 centavos hasta 999 millones</p>
+        <input type="text" id="numero" placeholder="introduce un numero">
+        <span id="texto"></span>
+
+        <script src="numeroaLetras.js"></script>
+        <script>
+            document.getElementById("numero").addEventListener("keyup", function (e) {
+                document.getElementById("texto").innerHTML = NumeroALetras(this.value);
+            });
+        </script>
+
+    </body>
+
+</html>
